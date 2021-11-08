@@ -1,0 +1,19 @@
+<h1>Stupid coaching</h1>
+
+<div class=question>
+  <%= @answers %>
+  <p class = signature><%= "You" %></p>
+</div>
+
+<div class=answer>
+  <% if @answers === "-You" %>
+    <p><%="Great!"%></p>
+  <% elsif @answers.include?("?") %>
+    <p><%= "Silly question, get dressed and go to work!" %></p>
+  <% else %>
+    <p><%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+  <p class = signature><%= "-Your coach" %></p>
+</div>
+
+<a href="/ask">ask a new question</a>
